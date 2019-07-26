@@ -2,16 +2,13 @@ package com.hunglephuong.fiendlyserver;
 
 import com.hunglephuong.fiendlyserver.model.BaseResponse;
 import com.hunglephuong.fiendlyserver.model.LoginRequest;
-import com.hunglephuong.fiendlyserver.model.RegisterResponse;
+import com.hunglephuong.fiendlyserver.model.RegisterRequest;
 import com.hunglephuong.fiendlyserver.model.UserProfile;
 import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.PostConstruct;
 
 @RestController
 public class TestController {
@@ -26,7 +23,7 @@ public class TestController {
         return BaseResponse.createResponse(userProfile);
     }
     @PostMapping(value = "/register")
-    public BaseResponse register(@RequestBody RegisterResponse registerResponse){
+    public BaseResponse register(@RequestBody RegisterRequest registerResponse){
         UserProfile userProfile = userProfileRepository.insertAccount(registerResponse.getUsername(),
                 registerResponse.getPassword(),registerResponse.getFullname(),registerResponse.getBirthday(),
                 registerResponse.getSex(),registerResponse.getAvatar(),registerResponse.getEmail(),registerResponse.getMobile());
