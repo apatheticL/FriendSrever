@@ -6,19 +6,14 @@ public class RegisterRequest {
     private String username;
     private String password;
     private String fullname;
-    private String mobile;
-    private String sex;
     private Date birthday;
-    private String email;
+    private String sex;
     private String avatar;
 
-    public Date getBirthday() {
-        return birthday;
-    }
+    private String email;
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+    private String mobile;
+
 
     public String getUsername() {
         return username;
@@ -44,12 +39,12 @@ public class RegisterRequest {
         this.fullname = fullname;
     }
 
-    public String getMobile() {
-        return mobile;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getSex() {
@@ -60,6 +55,14 @@ public class RegisterRequest {
         this.sex = sex;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -68,11 +71,11 @@ public class RegisterRequest {
         this.email = email;
     }
 
-    public String getAvatar() {
-        return avatar;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 }

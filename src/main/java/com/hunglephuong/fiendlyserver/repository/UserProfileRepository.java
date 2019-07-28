@@ -16,9 +16,15 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
 
 
     @Query(nativeQuery = true,value = "INSERT INTO user_profile" +
-            "([user_name],[password],[full_name],[birthday],[sex],[avatar],[email],[phone_number])" +
-            " VALUES (:username,:pass,:fullname,:birthday,:sex,:avatar,:email,:phonenumber) ")
-    UserProfile insertAccount(@Param(value = "username") String username,
-                              @Param(value = "pass") String password, @Param(value = "fullname") String fullname, @Param(value = "birthday") Date birthday,
-                              @Param(value = "sex") String sex, @Param(value = "avatar") String avatar, @Param(value = "email") String email,@Param(value = "phonenumber") String phonenumber);
+            "(id,user_name,password,full_name,birthday,sex,avatar,email,phone_number,created_time)" +
+            " VALUES (default,:username,:pass,:fullname,:birthday,:sex,:avatar,:email,:phonenumber,default) ")
+
+    UserProfile  insertAccount(@Param(value = "username") String username,
+                              @Param(value = "pass") String password,
+                              @Param(value = "fullname") String fullname,
+                              @Param(value = "birthday") Date birthday,
+                              @Param(value = "sex") String sex,
+                              @Param(value = "avatar") String avatar,
+                              @Param(value = "email") String email,
+                              @Param(value = "phonenumber") String phonenumber);
 }

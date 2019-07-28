@@ -59,6 +59,12 @@ public class SocketManager {
 
             }
         });
+        socketIOServer.addEventListener("insert", String.class, new DataListener<String>() {
+            @Override
+            public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
+                System.out.println("onData Inserted.........." + s);
+            }
+        });
         socketIOServer.start();
     }
 }

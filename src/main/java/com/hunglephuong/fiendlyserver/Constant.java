@@ -1,5 +1,5 @@
 package com.hunglephuong.fiendlyserver;
 
 public interface Constant {
-    String IP_SERVER = "10.255.144.218";
+    String IP_SERVER = "201.0.193.12";
 }
