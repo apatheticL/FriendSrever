@@ -1,6 +1,6 @@
-package com.t3h.demo.repository;
+package com.hunglephuong.fiendlyserver.repository;
 
-import com.t3h.demo.model.FriendId;
+import com.hunglephuong.fiendlyserver.model.FriendId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,10 +12,10 @@ import java.util.List;
 public interface FriendIdRepository extends JpaRepository<FriendId, Integer> {
 
     @Query(nativeQuery = true,
-    value = "SELECT id, sender_id, receiver_id " +
+    value = "SELECT id, sender_id, receive_id " +
             "FROM friend " +
             "WHERE sender_id = :userId OR " +
-            "receiver_id = :userId")
+            "receive_id = :userId")
     List<FriendId> findAllNotFriend(
             @Param(value = "userId") int userId
     );

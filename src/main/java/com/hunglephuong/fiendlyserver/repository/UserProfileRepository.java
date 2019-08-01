@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
+import java.util.List;
 
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile,Integer> {
@@ -27,4 +28,10 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
                               @Param(value = "avatar") String avatar,
                               @Param(value = "email") String email,
                               @Param(value = "phonenumber") String phonenumber);
+
+    @Query(nativeQuery = true,
+            value = "SELECT * FROM user_profile WHERE id not in :ids")
+    List<UserProfile> findAllNotFriend(
+            @Param(value = "ids") List<Integer> ids
+    );
 }

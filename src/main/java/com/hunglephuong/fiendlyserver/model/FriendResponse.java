@@ -1,4 +1,4 @@
-package com.t3h.demo.model;
+package com.hunglephuong.fiendlyserver.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

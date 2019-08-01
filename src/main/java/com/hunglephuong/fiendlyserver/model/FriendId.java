@@ -1,4 +1,4 @@
-package com.t3h.demo.model;
+package com.hunglephuong.fiendlyserver.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ public class FriendId {
     private int id;
     @Column(name = "sender_id")
     private int senderId;
-    @Column(name = "receiver_id")
+    @Column(name = "receive_id")
     private int receiverId;
 
     public int getId() {

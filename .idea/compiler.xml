@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FriendlyServer" />
+        <module name="FriendSrever" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FriendSrever" options="-parameters" />
       <module name="FriendlyServer" options="-parameters" />
     </option>
   </component>

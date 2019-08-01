@@ -1,9 +1,8 @@
-package com.t3h.demo.model;
+package com.hunglephuong.fiendlyserver.model;
 
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 import org.springframework.data.annotation.CreatedDate;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -15,7 +14,7 @@ public class Friend {
     private int id;
     @Column(name = "sender_id")
     private int senderId;
-    @Column(name = "receiver_id")
+    @Column(name = "receive_id")
     private int receiverId;
     @Column(name = "is_accept")
     private boolean isAccept;
