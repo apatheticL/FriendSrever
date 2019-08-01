@@ -20,6 +20,7 @@ public class BaseResponse {
         response.message = "SUCCESS";
         return response;
     }
+
     public int getStatus() {
         return status;
     }

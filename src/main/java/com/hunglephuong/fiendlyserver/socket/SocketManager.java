@@ -63,6 +63,7 @@ public class SocketManager {
             @Override
             public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
                 System.out.println("onData Inserted.........." + s);
+                ioClientMap.put(s,socketIOClient);
             }
         });
         socketIOServer.start();

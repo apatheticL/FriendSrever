@@ -1,20 +1,23 @@
 package com.hunglephuong.fiendlyserver;
 
-import com.hunglephuong.fiendlyserver.model.BaseResponse;
-import com.hunglephuong.fiendlyserver.model.LoginRequest;
-import com.hunglephuong.fiendlyserver.model.RegisterRequest;
-import com.hunglephuong.fiendlyserver.model.UserProfile;
+import com.hunglephuong.fiendlyserver.model.*;
+import com.hunglephuong.fiendlyserver.repository.StatusRepository;
 import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RestController
 public class TestController {
     @Autowired
     private UserProfileRepository userProfileRepository;
+    private StatusRepository statusRepository;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+
+    private Date date;
 
     @PostMapping(value = "/login")
     public BaseResponse login(@RequestBody LoginRequest loginRequest) {
@@ -26,14 +29,42 @@ public class TestController {
     }
 
     @PostMapping(value = "/register")
-    public BaseResponse register(@RequestBody RegisterRequest registerResponse) {
+    public BaseResponse  register(@RequestBody RegisterRequest registerResponse) {
 
-      UserProfile userProfile=    userProfileRepository.insertAccount(registerResponse.getUsername(),
-                registerResponse.getPassword(), registerResponse.getFullname(), registerResponse.getBirthday()
-                , registerResponse.getSex(),
-               registerResponse.getAvatar(), registerResponse.getEmail(),
-               registerResponse.getMobile());
-        return  BaseResponse.createResponse(userProfile);
+      UserProfile userProfile = new UserProfile();
+      userProfile.setUsername(registerResponse.getUsername());
+      userProfile.setPassword(registerResponse.getPassword());
+      userProfile.setFullname(registerResponse.getFullname());
+      userProfile.setBirthday(registerResponse.getBirthday());
+      userProfile.setSex(registerResponse.getSex());
+      userProfile.setAvatar(registerResponse.getAvatar());
+      userProfile.setEmail(registerResponse.getEmail());
+      userProfile.setPhoneNumber(registerResponse.getMobile());
+      userProfile.setCreatedTime(registerResponse.getCreatedtime());
+        try {
+            date = dateFormat.parse( userProfile.getBirthday());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        if (userProfile.getUsername().equals("")|| userProfile.getPassword().equals("")) {
+            BaseResponse.createResponse(0,"username and password not null");
+        }
+        UserProfile userProfile1 = userProfileRepository.findOneByUsername(userProfile.getUsername());
+         if (userProfile1==null) {
+            userProfileRepository.insertAccount(userProfile.getUsername(), userProfile.getPassword(),
+                    userProfile.getFullname(), date, userProfile.getSex(), userProfile.getAvatar(), userProfile.getEmail(),
+                    userProfile.getPhoneNumber());
+        }
+        else {
+             BaseResponse.createResponse(0,"username consist ");
+        }
+        return BaseResponse.createResponse(userProfile);
     }
+    @PostMapping(value = "/getStatusByUsername")
+    public BaseResponse getStatusByUsername(@RequestBody  StatusRequest statusRequest){
+//
+    }
+
+
 
 }
