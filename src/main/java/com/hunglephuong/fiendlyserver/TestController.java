@@ -46,19 +46,14 @@ public class TestController {
     }
 
     @GetMapping(value = "/getAllFriend")
-    public Object getAllFriend(
-            @RequestParam int id
-    ){
+    public Object getAllFriend(@RequestParam int id){
         return friendResponseRepository.findAllFriend(id);
     }
 
 
     @GetMapping(value = "/getAllNotFriend")
-    public Object getAllNotFriend(
-            @RequestParam int id
-    ){
-        List<FriendId> friendIds=
-                friendIdRepository.findAllNotFriend(id);
+    public Object getAllNotFriend(@RequestParam int id){
+        List<FriendId> friendIds= friendIdRepository.findAllNotFriend(id);
         List<Integer> fIds = new ArrayList<>();
         for (FriendId friendId : friendIds) {
             if (friendId.getReceiverId() == id){
