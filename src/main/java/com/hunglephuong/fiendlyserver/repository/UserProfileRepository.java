@@ -10,11 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-<<<<<<< HEAD
-=======
-import java.sql.Date;
 import java.util.List;
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
 
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile,Integer> {
@@ -36,13 +32,9 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
                               @Param(value = "email") String email,
                               @Param(value = "phonenumber") String phonenumber);
 
-<<<<<<< HEAD
-
-=======
     @Query(nativeQuery = true,
             value = "SELECT * FROM user_profile WHERE id not in :ids")
     List<UserProfile> findAllNotFriend(
             @Param(value = "ids") List<Integer> ids
     );
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
 }
