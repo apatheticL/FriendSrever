@@ -70,6 +70,7 @@ public class SocketManager {
         socketIOServer.addEventListener("message", String.class, new DataListener<String>() {
             @Override
             public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
+<<<<<<< HEAD
                 System.out.println("onData Test connect.........." + s);
 
                 MessageChatResponse message = objectMapper.readValue(s, MessageChatResponse.class);
@@ -78,6 +79,10 @@ public class SocketManager {
                     ioClientMap.get(receiverId+"").sendEvent("message", s);
                 }
 
+=======
+                System.out.println("onData Inserted.........." + s);
+                ioClientMap.put(s,socketIOClient);
+>>>>>>> 7e937456a3bc3a527e24138325a9154962f33b2a
             }
         });
         socketIOServer.start();

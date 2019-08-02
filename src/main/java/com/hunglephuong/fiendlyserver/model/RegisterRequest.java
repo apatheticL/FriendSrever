@@ -1,18 +1,21 @@
 package com.hunglephuong.fiendlyserver.model;
 
-import java.sql.Date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class RegisterRequest {
     private String username;
     private String password;
     private String fullname;
-    private Date birthday;
+    private String birthday;
     private String sex;
     private String avatar;
 
     private String email;
 
     private String mobile;
+    private Date createdtime;
 
 
     public String getUsername() {
@@ -35,15 +38,23 @@ public class RegisterRequest {
         return fullname;
     }
 
+    public Date getCreatedtime() {
+        return createdtime;
+    }
+
+    public void setCreatedtime(Date createdtime) {
+        this.createdtime = createdtime;
+    }
+
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

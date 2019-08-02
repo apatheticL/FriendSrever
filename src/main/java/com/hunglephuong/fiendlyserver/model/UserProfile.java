@@ -18,10 +18,15 @@ public class UserProfile {
     private String password;
     @Column(name = "full_name")
     private String fullname;
+
     private String birthday;
 
     private String sex;
     private String avatar;
+    private String email;
+
+
+
     @Column(name = "phone_number")
     private String phoneNumber;
     @Column(name = "created_time")
@@ -91,6 +96,13 @@ public class UserProfile {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getCreatedTime() {
