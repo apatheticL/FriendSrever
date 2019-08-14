@@ -9,6 +9,7 @@ import com.corundumstudio.socketio.listener.DataListener;
 import com.corundumstudio.socketio.listener.DisconnectListener;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hunglephuong.fiendlyserver.Constant;
+import com.hunglephuong.fiendlyserver.model.response.MessageChatResponse;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -55,7 +56,12 @@ public class SocketManager {
             @Override
             public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
                 System.out.println("onData Test connect.........." + s);
-
+                MessageChatResponse message =
+                        objectMapper.readValue(s, MessageChatResponse.class);
+                int receiverId = message.getReceiverId();
+                if (ioClientMap.keySet().contains(receiverId+"")){
+                    ioClientMap.get(receiverId+"").sendEvent("message", s);
+                }
 
             }
         });
