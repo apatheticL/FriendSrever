@@ -12,14 +12,14 @@ import java.util.List;
 
 @Repository
 public interface MessageRepository extends JpaRepository<MessageChatResponse,Integer> {
-//    @Query(nativeQuery = true,
-//    value = "SELECT message.id as id," +
-//            "message.sender_id" +
-//            "message.recieve_id" +
-//            "message.content" +
-//            "FROM message WHERE " +
-//            "(message.sender_id = :sender) and (message.recieve_id = :reveiver)")
-//    List<MessageChatResponse> selectMessage(@Param(value = "sender_id") int sender, @Param(value = "receiver_id") int receiver);
+    @Query(nativeQuery = true,
+    value = "SELECT message.id as id," +
+            "message.sender_id" +
+            "message.recieve_id" +
+            "message.content" +
+            "FROM message WHERE " +
+            "(message.sender_id = :sender_id) and (message.recieve_id = :receiver_id)")
+    List<MessageChatResponse> selectMessage(@Param(value = "sender_id") int sender, @Param(value = "receiver_id") int receiver);
 
     @Modifying
     @Query(nativeQuery = true, value =
