@@ -21,6 +21,7 @@ public interface StatusRepository extends JpaRepository<StatusResponse,Integer> 
             "user_profile.full_name as status_user_name," +
             "status.created_time," +
             "status.number_like ," +
+             "status.attachments,"+
             "status.number_share ," +
             "user_profile.id as user_id," +
             "status.number_comment  " +
@@ -32,8 +33,10 @@ public interface StatusRepository extends JpaRepository<StatusResponse,Integer> 
     // insert status
      @Modifying
     @Query(nativeQuery = true, value =
-    " insert into  status (id,user_id,content,created_time )" +
-            "values (default, :userid, :content,default )")
+    " insert into  status (id,user_id,content,attachments,created_time )" +
+            "values (default, :userid, :content,:attachments,default )")
     @Transactional
-    void insertStatus(@Param(value = "userid") int userid, @Param(value = "content") String content);
+    void insertStatus(@Param(value = "userid") int userid,
+                      @Param(value = "content") String content,
+                      @Param(value = "attachments") String attachments);
 }

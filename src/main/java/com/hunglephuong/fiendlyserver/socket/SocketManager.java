@@ -12,6 +12,8 @@ import com.hunglephuong.fiendlyserver.Constant;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +25,14 @@ public class SocketManager {
     @PostConstruct
     public void inits(){
         Configuration config =  new Configuration();
-        config.setHostname(Constant.IP_SERVER);
+        String ip = null;
+        try {
+            ip=InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            ip = Constant.IP_SERVER;
+        }
+        config.setHostname(ip);
         config.setPort(9092);
         socketIOServer = new SocketIOServer(config);
         socketIOServer.addConnectListener(new ConnectListener() {

@@ -2,40 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3275b04c-34ff-4cd1-a5e0-cfe450bbfb8c" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/StatusRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FireBaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FirebaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/CommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/friendly.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2aaff141-e6c4-4b8c-a7a8-7b24a075ff1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2aaff141-e6c4-4b8c-a7a8-7b24a075ff1e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendIdRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" afterDir="false" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/FriendlyServer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusFriendRespomse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusFriendRespomse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusFriendRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusFriendRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/TestController.class" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/BaseResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/BaseResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/UserProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/UserProfile.class" afterDir="false" />
-=======
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/BaseResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/FriendResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/model/RegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunglephuong/fiendlyserver/socket/SocketManager.class" afterDir="false" />
     </list>
@@ -79,18 +78,7 @@
         <item name="ahihi" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="friendlyy: schema" type="76f4a085:MysqlImplModel$Schema" />
-<<<<<<< HEAD
-        <item name="status: table" type="285a2a93:MysqlImplModel$Table" />
-=======
         <item name="comment: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ahihi" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="friendlyy: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user_profile: table" type="285a2a93:MysqlImplModel$Table" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
       </path>
     </expand>
     <select />
@@ -101,62 +89,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/CommentResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+            <state relative-caret-position="187">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#953#954#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1123#1124#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1199#1200#0" expanded="true" />
-                <element signature="e#1237#1238#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1517#1518#0" expanded="true" />
-                <element signature="e#1563#1564#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-                <element signature="e#1633#1634#0" expanded="true" />
-                <element signature="e#1685#1686#0" expanded="true" />
-                <element signature="e#1731#1732#0" expanded="true" />
-                <element signature="e#1768#1769#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-                <element signature="e#1859#1860#0" expanded="true" />
-                <element signature="e#1909#1910#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="408">
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,30 +113,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Friend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendId.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="1360">
+              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,32 +125,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendIdRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FirebaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="490">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FireBaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+            <state relative-caret-position="420">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -231,94 +146,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/StatusRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/friendly.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#136#137#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-              </folding>
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-            <state relative-caret-position="153">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-              <folding>
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-                <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1396#1397#0" expanded="true" />
-                <element signature="e#1440#1441#0" expanded="true" />
-                <element signature="e#1476#1477#0" expanded="true" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-              </folding>
+            <state relative-caret-position="867">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-=======
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -330,47 +180,61 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/LoginRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestControler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterResponse.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/StatusRequest.java" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendRepository.java" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendId.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Friend.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendIdRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusFriendRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusFriendRespomse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/RegisterResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/CommentResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/ReplyComentResponse.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FilebaseManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FireBaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FirebaseManager.java" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="main" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="main" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="673" />
-    <option name="width" value="694" />
-    <option name="height" value="775" />
+    <option name="x" value="-59" />
+    <option name="y" value="8" />
+    <option name="width" value="968" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -380,43 +244,42 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fiendlyserver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -424,22 +287,34 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fiendlyserver" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FriendSrever" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendSrever" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fiendlyserver" type="462c0819:PsiDirectoryNode" />
               <item name="socket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -457,7 +332,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestServer1802" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -472,11 +347,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hunglephuong.fiendlyserver" />
       <recent name="com.hunglephuong.fiendlyserver.repository" />
       <recent name="com.hunglephuong.fiendlyserver.model" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\DOAN\FriendlyServer\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -487,21 +371,9 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.014694509" />
   </component>
-  <component name="RunManager" selected="Spring Boot.Main (1)">
-    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="FriendSrever" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hunglephuong.fiendlyserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hunglephuong.fiendlyserver.Main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="FriendlyServer" />
       <extension name="coverage">
@@ -515,11 +387,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Main (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -536,25 +403,26 @@
       <workItem from="1564056005859" duration="3860000" />
       <workItem from="1564124775056" duration="9756000" />
       <workItem from="1564293546980" duration="5211000" />
-<<<<<<< HEAD
-      <workItem from="1564326084322" duration="2596000" />
-      <workItem from="1564477685464" duration="4244000" />
-      <workItem from="1564541590520" duration="1153000" />
-      <workItem from="1564626409931" duration="13603000" />
-      <workItem from="1564667992479" duration="772000" />
-=======
       <workItem from="1564505425241" duration="488000" />
       <workItem from="1564570704538" duration="1628000" />
       <workItem from="1564583049270" duration="2383000" />
       <workItem from="1564623052248" duration="13926000" />
-      <workItem from="1564665470340" duration="2008000" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+      <workItem from="1564665470340" duration="6471000" />
+      <workItem from="1564816947336" duration="880000" />
+      <workItem from="1564940268144" duration="772000" />
+      <workItem from="1565252569062" duration="7027000" />
+      <workItem from="1565282971455" duration="3932000" />
+      <workItem from="1565314392556" duration="3503000" />
+      <workItem from="1565341834936" duration="3843000" />
+      <workItem from="1565532812453" duration="4288000" />
+      <workItem from="1565602050266" duration="1455000" />
+      <workItem from="1565683284327" duration="9503000" />
+      <workItem from="1565767935743" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="54069000" />
+    <option name="totallyTimeSpent" value="95077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,16 +435,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17927383" />
-=======
-    <option name="totallyTimeSpent" value="52134000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2462006" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -586,33 +447,33 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4639017" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46376812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32872504" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.57296467" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.5716586" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5797101" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32978722" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.0741301" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.31382978" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.18381241" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17325228" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -622,107 +483,59 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.33494365" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.7246377" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32850242" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46376812" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32872504" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32850242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.5716586" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5797101" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.0741301" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.31316188" />
+      <window_info anchor="right" id="Database" order="6" weight="0.11331445" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-<<<<<<< HEAD
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17700455" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33494365" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.7246377" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32850242" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.31316188" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-=======
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>statusFriendRepository.findAllStatusFriend(userId)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FriendlyServer.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2aaff141-e6c4-4b8c-a7a8-7b24a075ff1e/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/LoginRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -730,108 +543,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar!/org/hibernate/annotations/GenerationTime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendResponse.java" />
+    <entry file="file://$PROJECT_DIR$/FriendlyServer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="741" column="36" selection-start-line="741" selection-start-column="36" selection-end-line="741" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-=======
-        <state relative-caret-position="405">
-          <caret line="24" column="73" lean-forward="true" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+        <state relative-caret-position="182">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/BaseResponse.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java">
+        <state relative-caret-position="204">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+        <state relative-caret-position="68">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -840,21 +633,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Friend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="102">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/FriendId.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusFriendRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -868,153 +678,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/CommentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/socket/SocketManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar!/org/hibernate/annotations/Generated.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        <state relative-caret-position="357">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/annotation/Generated.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="425">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
-=======
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1517#1518#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1685#1686#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1768#1769#0" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/FriendResponseRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
+        <state relative-caret-position="272">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/FriendResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/RegisterResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/LoginResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/UserProfileRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/StatusFriendRespomse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="765">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/RegisterRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/Status.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/StatusRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/ReplyComentResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/google-services.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/model/response/CommentResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="187">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
-            <element signature="e#136#137#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/repository/StatusRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="408">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1023,22 +810,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+        <state relative-caret-position="1360">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-=======
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/Constant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/friendly.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
->>>>>>> e26754ad821f7f7221725eee1e835f3a28e143c8
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FirebaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunglephuong/fiendlyserver/FireBaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

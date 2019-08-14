@@ -11,6 +11,8 @@ public class StatusFriendRespomse {
 
     @Column(name = "user_id")
     private int userId;
+    @Column(name = "avatar_friend")
+    private String avatarFriend;
     @Column(name = "content")
     private String content;
 
@@ -25,6 +27,16 @@ public class StatusFriendRespomse {
 
     @Column(name = "created_time")
     private Date createTime;
+    @Column(name = "attachments")
+    private String attachments;
+
+    public String getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(String attachments) {
+        this.attachments = attachments;
+    }
 
     @Column (name = "number_comment")
     private int numberComment;
@@ -48,6 +60,13 @@ public class StatusFriendRespomse {
         return content;
     }
 
+    public String getAvatarFriend() {
+        return avatarFriend;
+    }
+
+    public void setAvatarFriend(String avatarFriend) {
+        this.avatarFriend = avatarFriend;
+    }
 
     public void setContent(String content) {
         this.content = content;

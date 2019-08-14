@@ -30,6 +30,16 @@ public class Status {
 
     @Column (name = "number_comment")
     private int numberComment;
+    @Column(name = "attachments")
+    private String attachments;
+
+    public String getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(String attachments) {
+        this.attachments = attachments;
+    }
 
     public int getId() {
         return id;

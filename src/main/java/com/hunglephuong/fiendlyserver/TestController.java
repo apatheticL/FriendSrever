@@ -32,7 +32,8 @@ public class TestController {
 
     @Autowired
     private FriendIdRepository friendIdRepository;
-
+    @Autowired
+    private CommentRepository commentRepository;
     // phan start
 
     @PostMapping(value = "/login")
@@ -96,21 +97,27 @@ public class TestController {
         status.setNumberComment(statusResponse.getNumberComment());
         status.setNumberShare(statusResponse.getNumberComment());
         status.setCreatedTime(statusResponse.getCreateTime());
+        status.setAttachments(statusResponse.getAttachments());
         if (statusResponse.getContent().equals("")){
             BaseResponse.createResponse(0,"add status error");
         }
         else {
-              statusRepository.insertStatus(status.getUserId(),status.getContent());
+              statusRepository.insertStatus(status.getUserId(),status.getContent(),status.getAttachments());
         }
         return BaseResponse.createResponse(status);
 
     }
 
-    @GetMapping(value = "/getStatusByFriendUser")
-    public Object getStatusByFriendUser(@RequestParam int idUser){
-        return statusFriendRepository.findAllStatusFriend(idUser);
+    @GetMapping(value = "/getStatusByFriendUser/{id}")
+    public Object getStatusByFriendUser(@PathVariable(value ="id" ) int userId){
+        return statusFriendRepository.findAllStatusFriend(userId);
     }
 
+    // comment
+     @GetMapping(value = "/getAllCommentByStatus")
+     public Object getAllCommentByStatus(@RequestParam int statusid, @RequestParam int userid){
+        return commentRepository.getAllCommentByStatus(statusid,userid);
+     }
 
 
     //phan friend

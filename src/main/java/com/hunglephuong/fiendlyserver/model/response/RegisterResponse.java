@@ -11,9 +11,7 @@ public class RegisterResponse {
     private String birthday;
     private String sex;
     private String avatar;
-
     private String email;
-
     private String mobile;
     private Date createdtime;
 
