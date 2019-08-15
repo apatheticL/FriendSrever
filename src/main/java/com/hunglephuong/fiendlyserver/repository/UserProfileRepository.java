@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Date;
 
@@ -42,4 +43,9 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
             @Param(value = "ids") List<Integer> ids
     );
 
+
+    @Transactional
+    @Modifying
+    @Query(nativeQuery = true, value = "UPDATE user_profile set password = :newpassword WHERE user_profile.id = :userid")
+    void updatePassWord(@Param(value = "newpassword") String newpassword,@Param(value = "userid") int userid);
 }

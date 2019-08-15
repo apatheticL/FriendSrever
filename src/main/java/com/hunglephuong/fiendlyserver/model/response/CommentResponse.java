@@ -14,6 +14,8 @@ public class CommentResponse {
 
     @Column(name = "status_id")
     private int statusId;
+    @Column(name = "user_id")
+    private int userId;
     @Column(name = "avatar")
     private String avatarUser;
     private String content;
@@ -22,6 +24,14 @@ public class CommentResponse {
 
     @Column(name = "created_time")
     private Date createdTime;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     public int getId() {
         return id;
