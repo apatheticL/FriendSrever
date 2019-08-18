@@ -14,9 +14,9 @@ import java.util.List;
 public interface MessageRepository extends JpaRepository<MessageChatResponse,Integer> {
     @Query(nativeQuery = true,
     value = "SELECT message.id as id," +
-            "message.sender_id" +
-            "message.recieve_id" +
-            "message.content" +
+            "message.sender_id, " +
+            "message.recieve_id, " +
+            "message.content " +
             "FROM message WHERE " +
             "(message.sender_id = :sender_id) and (message.recieve_id = :receiver_id)")
     List<MessageChatResponse> selectMessage(@Param(value = "sender_id") int sender, @Param(value = "receiver_id") int receiver);
