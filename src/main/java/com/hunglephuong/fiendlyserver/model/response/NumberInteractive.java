@@ -2,16 +2,13 @@ package com.hunglephuong.fiendlyserver.model.response;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Entity
 public class NumberInteractive {
-    @Column(name = "number_like")
     private int numberLike;
-    @Column(name = "number_comment")
     private int numberCommnet;
-    @Column(name = "number_share")
-    private int numberShare;
 
+    private int numberShare;
     public int getNumberLike() {
         return numberLike;
     }

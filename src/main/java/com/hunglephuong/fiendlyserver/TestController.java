@@ -153,14 +153,6 @@ public class TestController {
 
     }
 
-    @GetMapping(value = "/countInteractive")
-    public BaseResponse countInteractive(@RequestParam int statusid){
-        NumberInteractive numberInteractive = statusRepository.countInteractive(statusid);
-        if (numberInteractive==null){
-            BaseResponse.createResponse(0,"not found");
-        }
-        return BaseResponse.createResponse(numberInteractive);
-    }
     @GetMapping(value = "/getStatusByFriendUser/{id}")
     public Object getStatusByFriendUser(@PathVariable(value ="id" ) int userId){
         return statusFriendRepository.findAllStatusFriend(userId);
