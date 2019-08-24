@@ -21,8 +21,8 @@ public class FirebaseManager {
             InputStream serviceAccount = new ClassPathResource("friendly.json").getInputStream();
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                    .setDatabaseUrl("https://friendly-6096d.firebaseio.com")
-                    .setStorageBucket("friendly-6096d.appspot.com")
+                    .setDatabaseUrl("https://minichat-78f54.firebaseio.com")
+                    .setStorageBucket("minichat-78f54.appspot.com")
                     .build();
 
             FirebaseApp.initializeApp(options);

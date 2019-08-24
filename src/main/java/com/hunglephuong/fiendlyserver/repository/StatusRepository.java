@@ -51,12 +51,31 @@ public interface StatusRepository extends JpaRepository<StatusResponse,Integer> 
 
     @Transactional
     @Modifying
-    @Query(nativeQuery = true, value = "UPDATE status set number_like = :newnumberlike WHERE status.id = :statusid")
+    @Query(nativeQuery = true, value = "UPDATE status set number_like = :newnumberlike WHERE status.id = :statusid ")
     void updateNumberLike(@Param(value = "newnumberlike") int newnumberlike,@Param(value = "statusid") int statusid);
 
     @Transactional
     @Modifying
     @Query(nativeQuery = true, value = "UPDATE status set number_share = :newnumbershare WHERE status.id = :statusid")
     void updateNumberShare(@Param(value = "newnumbershare") int newnumbershare,@Param(value = "statusid") int statusid);
+    @Transactional
+    @Modifying
+    @Query(nativeQuery = true, value = "UPDATE status set number_share = :newnumbercomment WHERE status.id = :statusid")
+    void updateNumberComment(@Param(value = "newnumbercomment") int newnumbercomment,@Param(value = "statusid") int statusid);
 
+
+
+    @Query(nativeQuery = true,value = "select number_like from status where status.id = :statusid")
+    int getNumberLike(@Param(value = "statusid") int statusid);
+
+    @Query(nativeQuery = true,value = "select number_share from status where status.id = :statusid")
+    int getNumberShare(@Param(value = "statusid") int statusid);
+
+    @Query(nativeQuery = true,value = "select number_comment from status where status.id = :statusid")
+    int getNumberComment(@Param(value = "statusid") int statusid);
+
+
+    @Modifying
+    @Query(value = "DELETE FROM status WHERE status.id = :id",nativeQuery = true)
+    List<StatusResponse> deleteByIdNative(@Param("id") int id);
 }

@@ -26,6 +26,7 @@ public class TestController {
     private Date date;
     private UserProfile userProfile = new UserProfile() ;
 
+
     @Autowired
     private FriendResponseRepository friendResponseRepository;
 
@@ -119,6 +120,19 @@ public class TestController {
         return BaseResponse.createResponse(status);
 
     }
+
+//    @PostMapping(value = "/updateNumberCommentByUser")
+//    public BaseResponse updateNumberCommentByUser(@RequestParam int newNumberComment,@RequestParam int statusId){
+//        status.setNumberLike(newNumberComment);
+//        if (status.getId()!=statusId){
+//            BaseResponse.createResponse(0,"failed to update");
+//        }
+//        else {
+//            statusRepository.updateNumberComment(status.getNumberComment(),statusId);
+//        }
+//        return BaseResponse.createResponse(status);
+
+//    }
     @PostMapping(value = "/updateNumberShareByUser")
     public BaseResponse updateNumberShareByUser(@RequestParam int newNumberShare,@RequestParam int statusId){
         status.setNumberShare(newNumberShare);
@@ -158,6 +172,28 @@ public class TestController {
         return statusFriendRepository.findAllStatusFriend(userId);
     }
 
+    @PostMapping(value = "/deleteStatusById")
+    public Object deleteStatusById(@RequestParam int id){
+        return statusRepository.deleteByIdNative(id);
+    }
+//
+//    @GetMapping(value = "/getNumberLike")
+//    public int getNumberLike(@RequestParam(value = "id") int id){
+//        return statusRepository.getNumberLike(id);
+//    }
+//
+//
+//    @GetMapping(value = "/getNumberComment")
+//    public int getNumberComment(@RequestParam(value = "id") int id){
+//        return statusRepository.getNumberComment(id);
+//    }
+//
+//    @GetMapping(value = "/getNumberShare")
+//    public int getNumberShare(@RequestParam(value = "id") int id){
+//        return statusRepository.getNumberShare(id);
+//    }
+
+
 
 //    @PostMapping(value = "/updateNumberLikeByStatusFriend")
 //    public BaseResponse updateNumberLikeByStatusFriend(@RequestParam int newNumberLike,@RequestParam int statusId){
@@ -188,6 +224,8 @@ public class TestController {
         }
         else {
             commentRepository.insertStatus(comment.getUserId(),comment.getStatusId(),comment.getContent());
+            status.setNumberComment(status.getNumberComment()+1);
+            statusRepository.updateNumberComment(status.getNumberComment(),comment.getStatusId());
         }
         return BaseResponse.createResponse(comment);
     }
@@ -212,7 +250,8 @@ public class TestController {
     ){
         List<FriendId> friendIds=
                 friendIdRepository.findAllNotFriend(id);
-        List<Integer> fIds = new ArrayList<>();
+         List<Integer> fIds = new ArrayList<>();
+        fIds.add(id);
         for (FriendId friendId : friendIds) {
             if (friendId.getReceiverId() == id){
                 fIds.add(friendId.getSenderId());
@@ -232,6 +271,23 @@ public class TestController {
         return messageRepository.selectMessage(senderId,receiverId);
     }
 
+    @GetMapping(value = "/getStatus")
+    public Object getStatus(
+            @RequestParam int id
+    ){
+        List<FriendId> friendIds=
+                friendIdRepository.findAllNotFriend(id);
+         List<Integer> fIds = new ArrayList<>();
+        fIds.add(id);
+        for (FriendId friendId : friendIds) {
+            if (friendId.getReceiverId() == id){
+                fIds.add(friendId.getSenderId());
+            }else {
+                fIds.add(friendId.getReceiverId());
+            }
+        }
+        return
+                statusFriendRepository.findAllStatusOfFriend(fIds);
 
-
+    }
 }

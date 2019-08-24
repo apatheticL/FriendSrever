@@ -17,6 +17,7 @@ public class StatusResponse {
     private int userId;
     @Column(name = "status_full_name")
     private String fullName;
+    private String avatar;
     @Column(name = "number_like")
     private int numberLike;
 
@@ -30,6 +31,14 @@ public class StatusResponse {
     private int numberComment;
     @Column(name = "attachments")
     private String attachments;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     public String getAttachments() {
         return attachments;

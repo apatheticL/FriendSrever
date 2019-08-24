@@ -13,7 +13,8 @@ import java.util.List;
 @Transactional
 public interface CommentRepository extends JpaRepository<CommentResponse,Integer> {
     @Query(nativeQuery = true ,
-            value = "select comment.id, comment.status_id,comment.user_id,user_profile.avatar,comment.content,user_profile.full_name,comment.created_time  " +
+            value = "select comment.id, comment.status_id,comment.user_id,user_profile.avatar," +
+                    "comment.content,user_profile.full_name,comment.created_time  " +
                     "from comment join status  on comment.status_id = status.id " +
                     "join user_profile on comment.user_id = user_profile.id " +
                     "where comment.status_id = :statusid " +

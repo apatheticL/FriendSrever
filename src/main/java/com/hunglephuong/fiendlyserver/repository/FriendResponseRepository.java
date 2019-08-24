@@ -1,5 +1,6 @@
 package com.hunglephuong.fiendlyserver.repository;
 
+import com.hunglephuong.fiendlyserver.model.Status;
 import com.hunglephuong.fiendlyserver.model.response.FriendResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -26,4 +27,6 @@ public interface FriendResponseRepository extends JpaRepository<FriendResponse, 
     List<FriendResponse> findAllFriend(
             @Param(value = "userId") int userId
     );
+
+
 }
