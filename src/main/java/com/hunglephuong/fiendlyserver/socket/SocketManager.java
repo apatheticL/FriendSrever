@@ -11,8 +11,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hunglephuong.fiendlyserver.Constant;
 import com.hunglephuong.fiendlyserver.model.Messages;
 import com.hunglephuong.fiendlyserver.model.response.MessageChatResponse;
-import com.hunglephuong.fiendlyserver.model.response.RegisterResponse;
 import com.hunglephuong.fiendlyserver.repository.*;
+import com.hunglephuong.fiendlyserver.repository.StatusRepository;
+import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,6 +35,8 @@ public class SocketManager {
 
     @Autowired
     private UserProfileRepository userProfileRepository;
+    @Autowired
+    private StatusRepository statusRepository;
     @PostConstruct
     public void inits(){
         Configuration config =  new Configuration();
@@ -86,6 +89,15 @@ public class SocketManager {
                 saveMessage(message);
             }
         });
+//        socketIOServer.addEventListener("status", String.class, new DataListener<String>() {
+//            @Override
+//            public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
+//                StatusResponse statusResponse =
+//                        objectMapper.readValue(s,StatusResponse.class);
+//
+//                statusRepository.insertStatus(statusResponse.getUserId(),statusResponse.getContent(),statusResponse.getAttachments());
+//            }
+//        });
         socketIOServer.start();
     }
     private void saveMessage(MessageChatResponse msg){
