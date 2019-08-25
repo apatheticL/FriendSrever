@@ -20,10 +20,11 @@ public class FireBaseController {
 
     @PostMapping(value = "/postImage")
     public Object postImage(
-            @RequestParam(value = "image")MultipartFile file
+            @RequestParam(value ="image")MultipartFile image
     ) throws IOException {
-        String path= firebaseManager.uploadFile(file);
-        return BaseResponse.createResponse(path);}
+        String path= firebaseManager.uploadFile(image);
+        return BaseResponse.createResponse(path);
+    }
 
     @GetMapping(value = "/getImage", produces = MediaType.IMAGE_JPEG_VALUE)
     public byte[] getImage(

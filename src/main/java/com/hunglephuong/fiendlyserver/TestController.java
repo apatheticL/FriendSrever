@@ -133,14 +133,24 @@ public class TestController {
 //        return BaseResponse.createResponse(status);
 
 //    }
-    @PostMapping(value = "/updateNumberShareByUser")
-    public BaseResponse updateNumberShareByUser(@RequestParam int newNumberShare,@RequestParam int statusId){
-        status.setNumberShare(newNumberShare);
-        if (status.getId()!=statusId){
-            BaseResponse.createResponse(0,"failed to update");
+    @PostMapping(value = "/shareStatusByUser")
+    public BaseResponse shareStatusByUser(@RequestBody StatusResponse statusResponse){
+        Status status =new Status();
+        status.setUserId(statusResponse.getUserId());//
+        status.setId(statusResponse.getId());
+        status.setContent(statusResponse.getContent());
+        status.setNumberLike(statusResponse.getNumberLike());
+        status.setNumberComment(statusResponse.getNumberComment());
+        status.setNumberShare(statusResponse.getNumberComment());
+        status.setCreatedTime(statusResponse.getCreateTime());
+        status.setAttachments(statusResponse.getAttachments());
+        if (statusResponse.getContent().equals("")&&statusResponse.getAttachments().equals("")){
+            BaseResponse.createResponse(0,"share status error");
         }
         else {
-            statusRepository.updateNumberShare(newNumberShare,statusId);
+            statusRepository.insertStatus(status.getUserId(),status.getContent(),status.getAttachments());
+            int newNumber = status.getNumberShare() +1;
+            statusRepository.updateNumberShare(newNumber,status.getId());
         }
         return BaseResponse.createResponse(status);
     }
