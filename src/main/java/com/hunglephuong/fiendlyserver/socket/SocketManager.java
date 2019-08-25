@@ -9,8 +9,8 @@ import com.corundumstudio.socketio.listener.DataListener;
 import com.corundumstudio.socketio.listener.DisconnectListener;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hunglephuong.fiendlyserver.Constant;
+import com.hunglephuong.fiendlyserver.model.MessageChatResponse;
 import com.hunglephuong.fiendlyserver.model.Messages;
-import com.hunglephuong.fiendlyserver.model.response.MessageChatResponse;
 import com.hunglephuong.fiendlyserver.repository.*;
 import com.hunglephuong.fiendlyserver.repository.StatusRepository;
 import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
@@ -76,28 +76,37 @@ public class SocketManager {
             }
         });
 
+//        socketIOServer.addEventListener("message", String.class, new DataListener<String>() {
+//            @Override
+//            public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
+//                System.out.println("onData Test connect.........." + s);
+//
+//
+//            }
+//        });
+        socketIOServer.addEventListener("insert", String.class, new DataListener<String>() {
+            @Override
+            public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
+                System.out.println("onData Inserted.........." + s);
+            }
+        });
+
         socketIOServer.addEventListener("message", String.class, new DataListener<String>() {
             @Override
             public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
                 System.out.println("onData Test connect.........." + s);
-                MessageChatResponse message =
-                        objectMapper.readValue(s, MessageChatResponse.class);
+
+                MessageChatResponse message = objectMapper.readValue(s, MessageChatResponse.class);
                 int receiverId = message.getReceiverId();
                 if (ioClientMap.keySet().contains(receiverId+"")){
                     ioClientMap.get(receiverId+"").sendEvent("message", s);
                 }
+
+                System.out.println("onData Inserted.........." + s);
+//                ioClientMap.put(s,socketIOClient);
                 saveMessage(message);
             }
         });
-//        socketIOServer.addEventListener("status", String.class, new DataListener<String>() {
-//            @Override
-//            public void onData(SocketIOClient socketIOClient, String s, AckRequest ackRequest) throws Exception {
-//                StatusResponse statusResponse =
-//                        objectMapper.readValue(s,StatusResponse.class);
-//
-//                statusRepository.insertStatus(statusResponse.getUserId(),statusResponse.getContent(),statusResponse.getAttachments());
-//            }
-//        });
         socketIOServer.start();
     }
     private void saveMessage(MessageChatResponse msg){

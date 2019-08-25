@@ -11,15 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Date;
 
-
-
 import java.util.List;
-
 
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile,Integer> {
     @Query(nativeQuery = true ,value = "SELECT * FROM user_profile WHERE " +
-            "user_name = :username LIMIT 1")
+            "user_name = :username")
     UserProfile findOneByUsername(@Param(value = "username")String username);
 
     @Modifying
@@ -35,7 +32,6 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
                               @Param(value = "avatar") String avatar,
                               @Param(value = "email") String email,
                               @Param(value = "phonenumber") String phonenumber);
-
 
     @Query(nativeQuery = true,
             value = "SELECT * FROM user_profile WHERE id not in :ids")

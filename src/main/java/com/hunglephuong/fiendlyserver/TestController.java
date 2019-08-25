@@ -1,5 +1,9 @@
 package com.hunglephuong.fiendlyserver;
 import com.hunglephuong.fiendlyserver.model.*;
+import com.hunglephuong.fiendlyserver.repository.StatusRepository;
+import com.hunglephuong.fiendlyserver.repository.FriendIdRepository;
+import com.hunglephuong.fiendlyserver.repository.FriendResponseRepository;
+import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
 import com.hunglephuong.fiendlyserver.model.response.*;
 import com.hunglephuong.fiendlyserver.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
-
 
 @RestController
 public class TestController {
@@ -81,6 +84,11 @@ public class TestController {
         }
         return BaseResponse.createResponse(userProfile);
     }
+//    @PostMapping(value = "/getStatusByUsername")
+//    public BaseResponse getStatusByUsername(@RequestBody  StatusRequest statusRequest){
+////
+//    }
+
 
     @PostMapping(value = "/forgotPassword")
     public BaseResponse forgotPassword(@RequestParam String newPassword,@RequestParam int userId){
@@ -247,20 +255,15 @@ public class TestController {
     }
 
     @GetMapping(value = "/getAllFriend")
-    public Object getAllFriend(
-            @RequestParam int id
-    ){
+    public Object getAllFriend(@RequestParam int id){
         return friendResponseRepository.findAllFriend(id);
     }
 
 
     @GetMapping(value = "/getAllNotFriend")
-    public Object getAllNotFriend(
-            @RequestParam int id
-    ){
-        List<FriendId> friendIds=
-                friendIdRepository.findAllNotFriend(id);
-         List<Integer> fIds = new ArrayList<>();
+    public Object getAllNotFriend(@RequestParam int id){
+        List<FriendId> friendIds= friendIdRepository.findAllNotFriend(id);
+        List<Integer> fIds = new ArrayList<>();
         fIds.add(id);
         for (FriendId friendId : friendIds) {
             if (friendId.getReceiverId() == id){
