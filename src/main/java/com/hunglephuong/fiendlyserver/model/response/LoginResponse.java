@@ -1,6 +1,6 @@
-package com.hunglephuong.fiendlyserver.model;
+package com.hunglephuong.fiendlyserver.model.response;
 
-public class LoginRequest {
+public class LoginResponse {
     private String username,password;
 
     public String getUsername() {

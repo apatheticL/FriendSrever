@@ -1,6 +1,6 @@
 package com.hunglephuong.fiendlyserver.repository;
 
-import com.hunglephuong.fiendlyserver.model.FriendResponse;
+import com.hunglephuong.fiendlyserver.model.response.FriendResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

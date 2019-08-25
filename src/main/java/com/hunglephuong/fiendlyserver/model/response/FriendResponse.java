@@ -1,4 +1,4 @@
-package com.hunglephuong.fiendlyserver.model;
+package com.hunglephuong.fiendlyserver.model.response;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
