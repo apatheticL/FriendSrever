@@ -276,12 +276,11 @@ public class TestController {
 
 
     //messager
-    @GetMapping(path = "/getHistoryChat")
+    @GetMapping(path = "user/getHistoryChat")
     public Object getHistoryChat(
             @RequestParam("senderId")int senderId,
             @RequestParam("receiverId")int receiverId
     ){
-//        return MegetHistoryChat(senderId, receiverId);
         return null;
     }
 
