@@ -1,6 +1,7 @@
 package com.hunglephuong.fiendlyserver.repository;
 
-import com.hunglephuong.fiendlyserver.model.FriendResponse;
+import com.hunglephuong.fiendlyserver.model.Status;
+import com.hunglephuong.fiendlyserver.model.response.FriendResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -20,10 +21,12 @@ public interface FriendResponseRepository extends JpaRepository<FriendResponse, 
                     "friend.created_time as created_time " +
                     "FROM " +
                     "friend JOIN user_profile ON " +
-                    "(friend.sender_id = :userId AND friend.receive_id = user_profile.id) OR "+
-                    "(friend.receive_id = :userId AND friend.sender_id = user_profile.id) "
+                    "(friend.sender_id = :userId AND friend.receiver_id = user_profile.id) OR "+
+                    "(friend.receiver_id = :userId AND friend.sender_id = user_profile.id) "
     )
     List<FriendResponse> findAllFriend(
             @Param(value = "userId") int userId
     );
+
+
 }

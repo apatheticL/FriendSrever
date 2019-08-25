@@ -14,7 +14,7 @@ public class Friend {
     private int id;
     @Column(name = "sender_id")
     private int senderId;
-    @Column(name = "receive_id")
+    @Column(name = "receiver_id")
     private int receiverId;
     @Column(name = "is_accept")
     private boolean isAccept;
@@ -22,6 +22,8 @@ public class Friend {
     @CreatedDate
     @Generated(value = GenerationTime.INSERT)
     private Date createdTime;
+    @Column(name = "last_message_id")
+    private Integer lastMessageId;
 
     public int getId() {
         return id;
@@ -61,5 +63,13 @@ public class Friend {
 
     public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
+    }
+
+    public Integer getLastMessageId() {
+        return lastMessageId;
+    }
+
+    public void setLastMessageId(Integer lastMessageId) {
+        this.lastMessageId = lastMessageId;
     }
 }

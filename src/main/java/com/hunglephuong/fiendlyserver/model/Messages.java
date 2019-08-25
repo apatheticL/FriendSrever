@@ -1,13 +1,22 @@
 package com.hunglephuong.fiendlyserver.model;
 
+import javax.persistence.*;
+import java.sql.Date;
 
-
-public class MessageChatResponse {
+@Entity
+@Table(name = "message")
+public class Messages {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
+    @Column(name = "sender_id")
     private int senderId;
+    @Column(name = "receiver_id")
     private int receiverId;
+    @Column(name = "created_time")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Date createdTime;
     private String content;
-    private String userAvatar;
     private String type;
 
     public int getId() {
@@ -34,20 +43,20 @@ public class MessageChatResponse {
         this.receiverId = receiverId;
     }
 
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
+
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public String getUserAvatar() {
-        return userAvatar;
-    }
-
-    public void setUserAvatar(String userAvatar) {
-        this.userAvatar = userAvatar;
     }
 
     public String getType() {

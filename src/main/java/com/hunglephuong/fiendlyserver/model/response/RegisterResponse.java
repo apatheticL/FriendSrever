@@ -1,19 +1,17 @@
-package com.hunglephuong.fiendlyserver.model;
+package com.hunglephuong.fiendlyserver.model.response;
 
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class RegisterRequest {
+public class RegisterResponse {
     private String username;
     private String password;
     private String fullname;
     private String birthday;
     private String sex;
     private String avatar;
-
     private String email;
-
     private String mobile;
     private Date createdtime;
 

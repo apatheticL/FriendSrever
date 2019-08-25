@@ -1,46 +1,43 @@
-package com.hunglephuong.fiendlyserver.model;
+package com.hunglephuong.fiendlyserver.model.response;
 
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.stereotype.Component;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-@Table(name = "status")
-
-public class Status {
+public class StatusResponse {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "user_id")
-    private int userId;
+
+
     @Column(name = "content")
     private String content;
+    @Column (name = "user_id")
+    private int userId;
+    @Column(name = "status_full_name")
+    private String fullName;
+    private String avatar;
     @Column(name = "number_like")
     private int numberLike;
+
     @Column(name = "number_share")
     private int numberShare;
+
     @Column(name = "created_time")
-    @CreatedDate
-    @Generated(value = GenerationTime.INSERT)
-     private Date createdTime;
+    private Date createTime;
 
     @Column (name = "number_comment")
     private int numberComment;
     @Column(name = "attachments")
     private String attachments;
-    @Column(name = "friend_id")
-    private String friendId;
 
-    public String getFriendId() {
-        return friendId;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setFriendId(String friendId) {
-        this.friendId = friendId;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getAttachments() {
@@ -51,14 +48,6 @@ public class Status {
         this.attachments = attachments;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getUserId() {
         return userId;
     }
@@ -67,12 +56,38 @@ public class Status {
         this.userId = userId;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
     public String getContent() {
         return content;
     }
 
+
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public int getNumberLike() {
@@ -89,14 +104,6 @@ public class Status {
 
     public void setNumberShare(int numberShare) {
         this.numberShare = numberShare;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
     }
 
     public int getNumberComment() {

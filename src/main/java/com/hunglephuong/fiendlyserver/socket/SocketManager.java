@@ -10,9 +10,16 @@ import com.corundumstudio.socketio.listener.DisconnectListener;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hunglephuong.fiendlyserver.Constant;
 import com.hunglephuong.fiendlyserver.model.MessageChatResponse;
+import com.hunglephuong.fiendlyserver.model.Messages;
+import com.hunglephuong.fiendlyserver.repository.*;
+import com.hunglephuong.fiendlyserver.repository.StatusRepository;
+import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,10 +28,27 @@ public class SocketManager {
     private SocketIOServer socketIOServer;
     private ObjectMapper objectMapper = new ObjectMapper();
     private Map<String, SocketIOClient> ioClientMap = new HashMap<>();
+    @Autowired
+    private FriendRepository friendRepository;
+    @Autowired
+    private MessageRepositiory messageRepositiory;
+
+    @Autowired
+    private UserProfileRepository userProfileRepository;
+    @Autowired
+    private StatusRepository statusRepository;
     @PostConstruct
     public void inits(){
         Configuration config =  new Configuration();
-        config.setHostname(Constant.IP_SERVER);
+        String ip = null;
+//        try {
+//            ip= InetAddress.getLocalHost().getHostAddress();
+//        } catch (UnknownHostException e) {
+//            e.printStackTrace();
+            ip = Constant.IP_SERVER;
+//        }
+        System.out.println("ip address: " + ip);
+        config.setHostname(ip);
         config.setPort(9092);
         socketIOServer = new SocketIOServer(config);
         socketIOServer.addConnectListener(new ConnectListener() {
@@ -79,9 +103,20 @@ public class SocketManager {
                 }
 
                 System.out.println("onData Inserted.........." + s);
-                ioClientMap.put(s,socketIOClient);
+//                ioClientMap.put(s,socketIOClient);
+                saveMessage(message);
             }
         });
         socketIOServer.start();
+    }
+    private void saveMessage(MessageChatResponse msg){
+        Messages message = new Messages();
+        message.setContent(msg.getContent());
+        message.setSenderId(msg.getSenderId());
+        message.setReceiverId(msg.getReceiverId());
+        message.setType(msg.getType());
+        message.setId(msg.getId());
+        message = messageRepositiory.save(message);
+        friendRepository.updateLastMessage(message.getId(), message.getSenderId(), message.getReceiverId());
     }
 }

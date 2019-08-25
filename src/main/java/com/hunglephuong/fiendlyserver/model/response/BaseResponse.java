@@ -1,4 +1,4 @@
-package com.hunglephuong.fiendlyserver.model;
+package com.hunglephuong.fiendlyserver.model.response;
 
 public class BaseResponse {
     private int status;
