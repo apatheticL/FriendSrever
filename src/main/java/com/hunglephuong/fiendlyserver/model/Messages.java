@@ -1,29 +1,23 @@
 package com.hunglephuong.fiendlyserver.model;
 
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
-import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
-@Table(name = "friend")
-public class Friend {
+@Table(name = "message")
+public class Messages {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     @Column(name = "sender_id")
     private int senderId;
-    @Column(name = "receive_id")
+    @Column(name = "receiver_id")
     private int receiverId;
-    @Column(name = "is_accept")
-    private boolean isAccept;
     @Column(name = "created_time")
-    @CreatedDate
-    @Generated(value = GenerationTime.INSERT)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Date createdTime;
-    @Column(name = "last_message_id")
-    private Integer lastMessageId;
+    private String content;
+    private String type;
 
     public int getId() {
         return id;
@@ -49,14 +43,6 @@ public class Friend {
         this.receiverId = receiverId;
     }
 
-    public boolean isAccept() {
-        return isAccept;
-    }
-
-    public void setAccept(boolean accept) {
-        isAccept = accept;
-    }
-
     public Date getCreatedTime() {
         return createdTime;
     }
@@ -65,11 +51,19 @@ public class Friend {
         this.createdTime = createdTime;
     }
 
-    public Integer getLastMessageId() {
-        return lastMessageId;
+    public String getContent() {
+        return content;
     }
 
-    public void setLastMessageId(Integer lastMessageId) {
-        this.lastMessageId = lastMessageId;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

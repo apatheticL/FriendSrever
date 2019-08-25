@@ -14,6 +14,16 @@ public class MessageChatResponse {
     private int receiverId;
     @Column(name ="content")
     private String content;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public int getId() {
         return id;
     }

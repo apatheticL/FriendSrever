@@ -2,10 +2,8 @@ package com.hunglephuong.fiendlyserver.repository;
 
 import com.hunglephuong.fiendlyserver.model.response.StatusFriendRespomse;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,8 +21,8 @@ public interface StatusFriendRepository extends JpaRepository<StatusFriendRespom
                     "user_profile.id as user_id," +
                     "user_profile.full_name as friend_full_name " +
                     "FROM  user_profile JOIN friend  ON " +
-                    "( (friend.sender_id = :iduser AND friend.receive_id = user_profile.id) OR " +
-                    " (friend.receive_id = :iduser AND friend.sender_id = user_profile.id) )" +
+                    "( (friend.sender_id = :iduser AND friend.receiver_id = user_profile.id) OR " +
+                    " (friend.receiver_id = :iduser AND friend.sender_id = user_profile.id) )" +
                     "   JOIN status on status.user_id = user_profile.id")
     List<StatusFriendRespomse> findAllStatusFriend(@Param(value = "iduser") int iduser);
 //

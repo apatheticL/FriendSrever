@@ -9,10 +9,10 @@ import com.corundumstudio.socketio.listener.DataListener;
 import com.corundumstudio.socketio.listener.DisconnectListener;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hunglephuong.fiendlyserver.Constant;
+import com.hunglephuong.fiendlyserver.model.Messages;
 import com.hunglephuong.fiendlyserver.model.response.MessageChatResponse;
 import com.hunglephuong.fiendlyserver.model.response.RegisterResponse;
-import com.hunglephuong.fiendlyserver.repository.MessageRepository;
-import com.hunglephuong.fiendlyserver.repository.UserProfileRepository;
+import com.hunglephuong.fiendlyserver.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,19 +28,23 @@ public class SocketManager {
     private ObjectMapper objectMapper = new ObjectMapper();
     private Map<String, SocketIOClient> ioClientMap = new HashMap<>();
     @Autowired
-    private MessageRepository messageRepository;
+    private FriendRepository friendRepository;
+    @Autowired
+    private MessageRepositiory messageRepositiory;
+
     @Autowired
     private UserProfileRepository userProfileRepository;
     @PostConstruct
     public void inits(){
         Configuration config =  new Configuration();
         String ip = null;
-        try {
-            ip= InetAddress.getLocalHost().getHostAddress();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
+//        try {
+//            ip= InetAddress.getLocalHost().getHostAddress();
+//        } catch (UnknownHostException e) {
+//            e.printStackTrace();
             ip = Constant.IP_SERVER;
-        }
+//        }
+        System.out.println("ip address: " + ip);
         config.setHostname(ip);
         config.setPort(9092);
         socketIOServer = new SocketIOServer(config);
@@ -75,14 +79,23 @@ public class SocketManager {
                 System.out.println("onData Test connect.........." + s);
                 MessageChatResponse message =
                         objectMapper.readValue(s, MessageChatResponse.class);
-                messageRepository.insertMessage(message.getSenderId(), message.getReceiverId(),message.getContent());
                 int receiverId = message.getReceiverId();
                 if (ioClientMap.keySet().contains(receiverId+"")){
                     ioClientMap.get(receiverId+"").sendEvent("message", s);
                 }
-
+                saveMessage(message);
             }
         });
         socketIOServer.start();
+    }
+    private void saveMessage(MessageChatResponse msg){
+        Messages message = new Messages();
+        message.setContent(msg.getContent());
+        message.setSenderId(msg.getSenderId());
+        message.setReceiverId(msg.getReceiverId());
+        message.setType(msg.getType());
+        message.setId(msg.getId());
+        message = messageRepositiory.save(message);
+        friendRepository.updateLastMessage(message.getId(), message.getSenderId(), message.getReceiverId());
     }
 }

@@ -19,7 +19,7 @@ public class FireBaseController {
             @RequestParam(value = "image")MultipartFile file
             ) throws IOException {
         String path= firebaseManager.uploadFile(file);
-        return BaseResponse.createResponse(path);
+        return path;
     }
 
     @GetMapping(value = "/getImage", produces = MediaType.IMAGE_JPEG_VALUE)

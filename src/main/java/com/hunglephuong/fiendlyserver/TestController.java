@@ -227,9 +227,13 @@ public class TestController {
 
 
     //messager
-    @GetMapping(value = "/selectMessage")
-    public Object selectMessage(@RequestParam int senderId,@RequestParam int receiverId ){
-        return messageRepository.selectMessage(senderId,receiverId);
+    @GetMapping(path = "/getHistoryChat")
+    public Object getHistoryChat(
+            @RequestParam("senderId")int senderId,
+            @RequestParam("receiverId")int receiverId
+    ){
+//        return MegetHistoryChat(senderId, receiverId);
+        return null;
     }
 
 
