@@ -41,62 +41,62 @@ public class TestController {
     @Autowired
     private MessageRepository messageRepository;
 
-    @PostMapping(value = "/login")
-    public BaseResponse login(@RequestBody LoginResponse loginRequest) {
-        userProfile = userProfileRepository.findOneByUsername(loginRequest.getUsername());
+//    @PostMapping(value = "/login")
+//    public BaseResponse login(@RequestBody LoginResponse loginRequest) {
+//         userProfile = userProfileRepository.findOneByUsername(loginRequest.getUsername());
+//
+//        if (userProfile == null || !userProfile.getPassword().equals(loginRequest.getPassword())) {
+//            return BaseResponse.createResponse(0, "username or password invalid ");
+//        }
+//        return BaseResponse.createResponse(userProfile);
+//    }
 
-        if (userProfile == null || !userProfile.getPassword().equals(loginRequest.getPassword())) {
-            return BaseResponse.createResponse(0, "username or password invalid ");
-        }
-        return BaseResponse.createResponse(userProfile);
-    }
-
-    @PostMapping(value = "/register")
-    public BaseResponse  register(@RequestBody RegisterResponse registerResponse) {
-
-        UserProfile userProfile = new UserProfile();
-        userProfile.setUsername(registerResponse.getUsername());
-        userProfile.setPassword(registerResponse.getPassword());
-        userProfile.setFullname(registerResponse.getFullname());
-        userProfile.setBirthday(registerResponse.getBirthday());
-        userProfile.setSex(registerResponse.getSex());
-        userProfile.setAvatar(registerResponse.getAvatar());
-        userProfile.setEmail(registerResponse.getEmail());
-        userProfile.setPhoneNumber(registerResponse.getMobile());
-        userProfile.setCreatedTime(registerResponse.getCreatedtime());
-        try {
-            date = dateFormat.parse( userProfile.getBirthday());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        if (userProfile.getUsername().equals("")|| userProfile.getPassword().equals("")) {
-            BaseResponse.createResponse(0,"username and password not null");
-        }
-        UserProfile userProfile1 = userProfileRepository.findOneByUsername(userProfile.getUsername());
-        if (userProfile1==null) {
-            userProfileRepository.insertAccount(userProfile.getUsername(), userProfile.getPassword(),
-                    userProfile.getFullname(), date, userProfile.getSex(), userProfile.getAvatar(), userProfile.getEmail(),
-                    userProfile.getPhoneNumber());
-        }
-        else {
-            BaseResponse.createResponse(0,"username consist ");
-        }
-        return BaseResponse.createResponse(userProfile);
-    }
-
-    @PostMapping(value = "/forgotPassword")
-    public BaseResponse forgotPassword(@RequestParam String newPassword,@RequestParam int userId){
-        userProfile.setId(userId);
-        userProfile.setPassword(newPassword);
-        if (newPassword.equals("")){
-            BaseResponse.createResponse(0,"Invalid password ");
-        }
-        userProfileRepository.updatePassWord(newPassword,userId);
-        return BaseResponse.createResponse(userProfile);
-    }
+//    @PostMapping(value = "/register")
+//    public BaseResponse  register(@RequestBody RegisterResponse registerResponse) {
+//
+//      UserProfile userProfile = new UserProfile();
+//      userProfile.setUsername(registerResponse.getUsername());
+//      userProfile.setPassword(registerResponse.getPassword());
+//      userProfile.setFullname(registerResponse.getFullname());
+//      userProfile.setBirthday(registerResponse.getBirthday());
+//      userProfile.setSex(registerResponse.getSex());
+//      userProfile.setAvatar(registerResponse.getAvatar());
+//      userProfile.setEmail(registerResponse.getEmail());
+//      userProfile.setPhoneNumber(registerResponse.getMobile());
+//      userProfile.setCreatedTime(registerResponse.getCreatedtime());
+//        try {
+//            date = dateFormat.parse( userProfile.getBirthday());
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        if (userProfile.getUsername().equals("")|| userProfile.getPassword().equals("")) {
+//            BaseResponse.createResponse(0,"username and password not null");
+//        }
+//        UserProfile userProfile1 = userProfileRepository.findOneByUsername(userProfile.getUsername());
+//         if (userProfile1==null) {
+//            userProfileRepository.insertAccount(userProfile.getUsername(), userProfile.getPassword(),
+//                    userProfile.getFullname(), date, userProfile.getSex(), userProfile.getAvatar(), userProfile.getEmail(),
+//                    userProfile.getPhoneNumber());
+//        }
+//        else {
+//             BaseResponse.createResponse(0,"username consist ");
+//        }
+//        return BaseResponse.createResponse(userProfile);
+//    }
+//
+//    @PostMapping(value = "/forgotPassword")
+//    public BaseResponse forgotPassword(@RequestParam String newPassword,@RequestParam int userId){
+//        userProfile.setId(userId);
+//        userProfile.setPassword(newPassword);
+//        if (newPassword.equals("")){
+//            BaseResponse.createResponse(0,"Invalid password ");
+//        }
+//         userProfileRepository.updatePassWord(newPassword,userId);
+//         return BaseResponse.createResponse(userProfile);
+//    }
 
 
-    // phan status
+// phan status
     @GetMapping(value = "/getOneStatusById")
     public BaseResponse getOneStatusById(@RequestParam int id){
         status = statusRepository.findOneByStatusId(id);
@@ -134,25 +134,15 @@ public class TestController {
 //        }
 //        return BaseResponse.createResponse(status);
 
-    //    }
-    @PostMapping(value = "/shareStatusByUser")
-    public BaseResponse shareStatusByUser(@RequestBody StatusResponse statusResponse){
-        Status status =new Status();
-        status.setUserId(statusResponse.getUserId());//
-        status.setId(statusResponse.getId());
-        status.setContent(statusResponse.getContent());
-        status.setNumberLike(statusResponse.getNumberLike());
-        status.setNumberComment(statusResponse.getNumberComment());
-        status.setNumberShare(statusResponse.getNumberComment());
-        status.setCreatedTime(statusResponse.getCreateTime());
-        status.setAttachments(statusResponse.getAttachments());
-        if (statusResponse.getContent().equals("")&&statusResponse.getAttachments().equals("")){
-            BaseResponse.createResponse(0,"share status error");
+//    }
+    @PostMapping(value = "/updateNumberShareByUser")
+    public BaseResponse updateNumberShareByUser(@RequestParam int newNumberShare,@RequestParam int statusId){
+        status.setNumberShare(newNumberShare);
+        if (status.getId()!=statusId){
+            BaseResponse.createResponse(0,"failed to update");
         }
         else {
-            statusRepository.insertStatus(status.getUserId(),status.getContent(),status.getAttachments());
-            int newNumber = status.getNumberShare() +1;
-            statusRepository.updateNumberShare(newNumber,status.getId());
+            statusRepository.updateNumberShare(newNumberShare,statusId);
         }
         return BaseResponse.createResponse(status);
     }
@@ -173,7 +163,7 @@ public class TestController {
             BaseResponse.createResponse(0,"add status error");
         }
         else {
-            statusRepository.insertStatus(status.getUserId(),status.getContent(),status.getAttachments());
+              statusRepository.insertStatus(status.getUserId(),status.getContent(),status.getAttachments());
         }
         return BaseResponse.createResponse(status);
 
