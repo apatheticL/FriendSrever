@@ -30,6 +30,26 @@ public class Status {
 
     @Column (name = "number_comment")
     private int numberComment;
+    @Column(name = "attachments")
+    private String attachments;
+    @Column(name = "friend_id")
+    private String friendId;
+
+    public String getFriendId() {
+        return friendId;
+    }
+
+    public void setFriendId(String friendId) {
+        this.friendId = friendId;
+    }
+
+    public String getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(String attachments) {
+        this.attachments = attachments;
+    }
 
     public int getId() {
         return id;

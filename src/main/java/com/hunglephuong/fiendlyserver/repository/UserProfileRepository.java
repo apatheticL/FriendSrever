@@ -13,6 +13,7 @@ import java.util.List;
 
 
 
+
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile,Integer> {
     @Query(nativeQuery = true ,value = "SELECT * FROM user_profile WHERE " +
@@ -39,5 +40,12 @@ public interface UserProfileRepository extends JpaRepository<UserProfile,Integer
     List<UserProfile> findAllNotFriend(
             @Param(value = "ids") List<Integer> ids
     );
+
+
+
+    @Transactional
+    @Modifying
+    @Query(nativeQuery = true, value = "UPDATE user_profile set password = :newpassword WHERE user_profile.id = :userid")
+    void updatePassWord(@Param(value = "newpassword") String newpassword,@Param(value = "userid") int userid);
 
 }

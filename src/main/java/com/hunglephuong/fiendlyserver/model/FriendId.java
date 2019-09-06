@@ -10,7 +10,7 @@ public class FriendId {
     private int id;
     @Column(name = "sender_id")
     private int senderId;
-    @Column(name = "receive_id")
+    @Column(name = "receiver_id")
     private int receiverId;
 
     public int getId() {

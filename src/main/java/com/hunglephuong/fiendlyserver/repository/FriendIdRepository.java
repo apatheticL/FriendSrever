@@ -12,10 +12,10 @@ import java.util.List;
 public interface FriendIdRepository extends JpaRepository<FriendId, Integer> {
 
     @Query(nativeQuery = true,
-    value = "SELECT id, sender_id, receive_id " +
+    value = "SELECT id, sender_id, receiver_id " +
             "FROM friend " +
             "WHERE sender_id = :userId OR " +
-            "receive_id = :userId")
+            "receiver_id = :userId")
     List<FriendId> findAllNotFriend(
             @Param(value = "userId") int userId
     );
