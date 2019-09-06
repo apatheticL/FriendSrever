@@ -27,17 +27,17 @@ public interface StatusRepository extends JpaRepository<StatusResponse,Integer> 
     @Query(nativeQuery = true,
     value = "SELECT status.id as id, " +
             "status.content, " +
-            "user_profile.full_name as status_user_name," +
+            "user_profile.full_name as status_full_name," +
             "status.created_time, " +
-            "status.number_like , " +
+            "status.number_like ," +
              "status.attachments, "+
             "status.number_share, " +
-            " user_profile.avatar , " +
+            " user_profile.avatar ," +
             "user_profile.id as user_id, " +
             "status.number_comment  " +
             " FROM status join user_profile on " +
-            " (status.user_id = user_profile.id) AND (status.user_id=:idu)")
-    List<StatusResponse> findAllStatusUser(@Param(value = "idu")int idu);
+            " (status.user_id = user_profile.id) AND (status.user_id=:id)")
+    List<StatusResponse> findAllStatusUser(@Param(value = "id")int id);
 
 
     // insert status

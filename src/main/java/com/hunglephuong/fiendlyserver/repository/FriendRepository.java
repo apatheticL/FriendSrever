@@ -13,11 +13,12 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
     @Modifying(clearAutomatically = true)
     @Transactional
     @Query(nativeQuery = true,
-            value = "UPDATE friend SET last_message_id = :lastMessageId WHERE " +
+            value = "UPDATE friend " +
+                    "SET last_message = :lastMessage WHERE " +
             "(receiver_id = :receiverId and sender_id = :senderId ) OR " +
                     "(sender_id = :receiverId and receiver_id = :senderId )")
     void updateLastMessage(
-            @Param(value = "lastMessageId") int lastMessageId,
+            @Param(value = "lastMessage") String lastMessage,
             @Param(value = "senderId") int senderId,
             @Param(value = "receiverId") int receiverId
     );

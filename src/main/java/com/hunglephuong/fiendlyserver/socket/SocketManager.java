@@ -41,12 +41,12 @@ public class SocketManager {
     public void inits(){
         Configuration config =  new Configuration();
         String ip = null;
-//        try {
-//            ip= InetAddress.getLocalHost().getHostAddress();
-//        } catch (UnknownHostException e) {
-//            e.printStackTrace();
+        try {
+            ip= InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
             ip = Constant.IP_SERVER;
-//        }
+        }
         System.out.println("ip address: " + ip);
         config.setHostname(ip);
         config.setPort(9092);
@@ -117,6 +117,6 @@ public class SocketManager {
         message.setType(msg.getType());
         message.setId(msg.getId());
         message = messageRepositiory.save(message);
-        friendRepository.updateLastMessage(message.getId(), message.getSenderId(), message.getReceiverId());
+        friendRepository.updateLastMessage(message.getContent(), message.getSenderId(), message.getReceiverId());
     }
 }

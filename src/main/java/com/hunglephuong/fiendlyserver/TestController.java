@@ -84,10 +84,14 @@ public class TestController {
         }
         return BaseResponse.createResponse(userProfile);
     }
-//    @PostMapping(value = "/getStatusByUsername")
-//    public BaseResponse getStatusByUsername(@RequestBody  StatusRequest statusRequest){
-////
-//    }
+    @GetMapping(value = "/getUser")
+    public BaseResponse getStatusByUsername(@RequestParam  int id){
+       userProfile = userProfileRepository.getUser(id);
+       if (userProfile==null){
+           BaseResponse.createResponse(0,"Null");
+       }
+       return BaseResponse.createResponse(userProfile);
+    }
 
 
     @PostMapping(value = "/forgotPassword")
@@ -112,9 +116,12 @@ public class TestController {
         return BaseResponse.createResponse(status);
     }
     @GetMapping(value = "/getStatusByUser")
-    public Object getStatusByUser(@RequestParam int Id ){
-        return statusRepository.findAllStatusUser(Id);
+    public Object getStatusByUser(@RequestParam int idUser ){
+        return statusRepository.findAllStatusUser(idUser);
     }
+
+
+
 
     @PostMapping(value = "/updateNumberLikeByUser")
     public BaseResponse updateNumberLikeByUser(@RequestParam int newNumberLike,@RequestParam int statusId){
@@ -240,6 +247,7 @@ public class TestController {
         if (commentResponse.getContent().equals("")){
             BaseResponse.createResponse(0,"add comment error");
         }
+
         else {
             commentRepository.insertStatus(comment.getUserId(),comment.getStatusId(),comment.getContent());
             status.setNumberComment(status.getNumberComment()+1);
@@ -285,7 +293,10 @@ public class TestController {
             @RequestParam("receiverId")int receiverId
     ){
 //        return MegetHistoryChat(senderId, receiverId);
-        return null;
+        return BaseResponse.createResponse(
+                messageRepository
+                        .selectMessage(senderId, receiverId)
+        );
     }
 
     @GetMapping(value = "/getStatus")
