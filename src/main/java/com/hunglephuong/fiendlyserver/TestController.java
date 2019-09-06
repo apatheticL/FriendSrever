@@ -136,16 +136,7 @@ public class TestController {
 
     }
 
-//    @PostMapping(value = "/updateNumberCommentByUser")
-//    public BaseResponse updateNumberCommentByUser(@RequestParam int newNumberComment,@RequestParam int statusId){
-//        status.setNumberLike(newNumberComment);
-//        if (status.getId()!=statusId){
-//            BaseResponse.createResponse(0,"failed to update");
-//        }
-//        else {
-//            statusRepository.updateNumberComment(status.getNumberComment(),statusId);
-//        }
-//        return BaseResponse.createResponse(status);
+//
 
 //    }
     @PostMapping(value = "/shareStatusByUser")
@@ -201,35 +192,7 @@ public class TestController {
     public Object deleteStatusById(@RequestParam int id){
         return statusRepository.deleteByIdNative(id);
     }
-//
-//    @GetMapping(value = "/getNumberLike")
-//    public int getNumberLike(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberLike(id);
-//    }
-//
-//
-//    @GetMapping(value = "/getNumberComment")
-//    public int getNumberComment(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberComment(id);
-//    }
-//
-//    @GetMapping(value = "/getNumberShare")
-//    public int getNumberShare(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberShare(id);
-//    }
 
-
-
-//    @PostMapping(value = "/updateNumberLikeByStatusFriend")
-//    public BaseResponse updateNumberLikeByStatusFriend(@RequestParam int newNumberLike,@RequestParam int statusId){
-//
-//        statusFriendRepository.updateNumberLikeByStatusFriend(newNumberLike,statusId);
-//    }
-//
-//    @PostMapping(value = "/updateNumberShareByStatusFriend")
-//    public void updateNumberShareByStatusFriend(@RequestParam int newNumberShare,@RequestParam int statusId){
-//        statusFriendRepository.updateNumberShareByStatusFriend(newNumberShare,statusId);
-//    }
     // comment
      @GetMapping(value = "/getAllCommentByStatus")
      public Object getAllCommentByStatus(@RequestParam int statusid){
