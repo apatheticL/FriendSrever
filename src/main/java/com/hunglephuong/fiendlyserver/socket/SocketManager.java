@@ -41,12 +41,12 @@ public class SocketManager {
     public void inits(){
         Configuration config =  new Configuration();
         String ip = null;
-//        try {
-//            ip= InetAddress.getLocalHost().getHostAddress();
-//        } catch (UnknownHostException e) {
-//            e.printStackTrace();
+        try {
+            ip= InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
             ip = Constant.IP_SERVER;
-//        }
+        }
         System.out.println("ip address: " + ip);
         config.setHostname(ip);
         config.setPort(9092);

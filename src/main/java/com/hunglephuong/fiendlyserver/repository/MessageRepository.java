@@ -16,6 +16,7 @@ public interface MessageRepository extends JpaRepository<MessageChatResponse,Int
     value = "SELECT message.id as id," +
             "message.sender_id," +
             "message.receiver_id," +
+            "message.type," +
             "message.content " +
             "FROM  message  WHERE  " +
             "( message.sender_id = :senderid ) and (message.receiver_id = :receiverid)")

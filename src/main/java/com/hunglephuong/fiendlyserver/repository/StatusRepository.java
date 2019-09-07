@@ -27,7 +27,7 @@ public interface StatusRepository extends JpaRepository<StatusResponse,Integer> 
     @Query(nativeQuery = true,
     value = "SELECT status.id as id, " +
             "status.content, " +
-            "user_profile.full_name as status_user_name," +
+            "user_profile.full_name as status_full_name," +
             "status.created_time, " +
             "status.number_like , " +
              "status.attachments, "+

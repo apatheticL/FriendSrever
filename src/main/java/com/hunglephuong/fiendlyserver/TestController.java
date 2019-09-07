@@ -84,10 +84,14 @@ public class TestController {
         }
         return BaseResponse.createResponse(userProfile);
     }
-//    @PostMapping(value = "/getStatusByUsername")
-//    public BaseResponse getStatusByUsername(@RequestBody  StatusRequest statusRequest){
-////
-//    }
+    @GetMapping(value = "/getUser")
+    public BaseResponse getStatusByUsername(@RequestParam  int id){
+       userProfile = userProfileRepository.getUser(id);
+       if (userProfile==null){
+           BaseResponse.createResponse(0,"Null");
+       }
+       return BaseResponse.createResponse(userProfile);
+    }
 
 
     @PostMapping(value = "/forgotPassword")
@@ -112,9 +116,12 @@ public class TestController {
         return BaseResponse.createResponse(status);
     }
     @GetMapping(value = "/getStatusByUser")
-    public Object getStatusByUser(@RequestParam int Id ){
-        return statusRepository.findAllStatusUser(Id);
+    public Object getStatusByUser(@RequestParam int idUser ){
+        return statusRepository.findAllStatusUser(idUser);
     }
+
+
+
 
     @PostMapping(value = "/updateNumberLikeByUser")
     public BaseResponse updateNumberLikeByUser(@RequestParam int newNumberLike,@RequestParam int statusId){
@@ -175,6 +182,9 @@ public class TestController {
         status.setNumberShare(statusResponse.getNumberComment());
         status.setCreatedTime(statusResponse.getCreateTime());
         status.setAttachments(statusResponse.getAttachments());
+        if (statusResponse==null){
+            BaseResponse.createResponse(0,"add status error");
+        }
         if (statusResponse.getContent().equals("")&&statusResponse.getAttachments().equals("")){
             BaseResponse.createResponse(0,"add status error");
         }
@@ -194,35 +204,7 @@ public class TestController {
     public Object deleteStatusById(@RequestParam int id){
         return statusRepository.deleteByIdNative(id);
     }
-//
-//    @GetMapping(value = "/getNumberLike")
-//    public int getNumberLike(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberLike(id);
-//    }
-//
-//
-//    @GetMapping(value = "/getNumberComment")
-//    public int getNumberComment(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberComment(id);
-//    }
-//
-//    @GetMapping(value = "/getNumberShare")
-//    public int getNumberShare(@RequestParam(value = "id") int id){
-//        return statusRepository.getNumberShare(id);
-//    }
 
-
-
-//    @PostMapping(value = "/updateNumberLikeByStatusFriend")
-//    public BaseResponse updateNumberLikeByStatusFriend(@RequestParam int newNumberLike,@RequestParam int statusId){
-//
-//        statusFriendRepository.updateNumberLikeByStatusFriend(newNumberLike,statusId);
-//    }
-//
-//    @PostMapping(value = "/updateNumberShareByStatusFriend")
-//    public void updateNumberShareByStatusFriend(@RequestParam int newNumberShare,@RequestParam int statusId){
-//        statusFriendRepository.updateNumberShareByStatusFriend(newNumberShare,statusId);
-//    }
     // comment
      @GetMapping(value = "/getAllCommentByStatus")
      public Object getAllCommentByStatus(@RequestParam int statusid){
@@ -240,6 +222,7 @@ public class TestController {
         if (commentResponse.getContent().equals("")){
             BaseResponse.createResponse(0,"add comment error");
         }
+
         else {
             commentRepository.insertStatus(comment.getUserId(),comment.getStatusId(),comment.getContent());
             status.setNumberComment(status.getNumberComment()+1);
@@ -279,12 +262,16 @@ public class TestController {
 
 
     //messager
-    @GetMapping(path = "user/getHistoryChat")
+    @GetMapping(path = "/getHistoryChat")
     public Object getHistoryChat(
             @RequestParam("senderId")int senderId,
             @RequestParam("receiverId")int receiverId
     ){
-        return null;
+//        return MegetHistoryChat(senderId, receiverId);
+        return BaseResponse.createResponse(
+                messageRepository
+                        .selectMessage(senderId, receiverId)
+        );
     }
 
     @GetMapping(value = "/getStatus")
